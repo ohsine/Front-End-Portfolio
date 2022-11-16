@@ -20,6 +20,7 @@ const UserList = () =>
     ];
 
     return (
+        <div>
         <table>
             <thead>
                 <tr>
@@ -31,6 +32,10 @@ const UserList = () =>
                 {users.map(user => <User userData={user} />)}
             </tbody>
         </table>
+        
+        <p>배열 데이터를 입력 받았을 때 테이블 형식으로 출력하는 방식 : List</p>
+        <p>map함수를 이용해서 반복 &gt; users의 요소들을 userData 프로퍼티로 넘겨주고 {`<tr>`}태그를 반환한다.</p>
+        </div>
     )
 }
 

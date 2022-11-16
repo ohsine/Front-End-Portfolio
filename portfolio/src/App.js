@@ -12,7 +12,9 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/counter">Counter</Link> |{" "}
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/about">About</Link> |{" "}
+        <Link to="/counter">Counter</Link> |{" "}
         <Link to="/input">Input</Link> |{" "}
         <Link to="/input2">Input2</Link> |{" "}
         <Link to="/list">List</Link>
