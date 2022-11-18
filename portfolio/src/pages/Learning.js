@@ -114,12 +114,46 @@ const Learning = () =>
     )
 }
 
-const Modal2 = () => {
-    return (<p>const로 선언하면 나중에 수정하면 애러가 발생하여 오류를 줄일 수 있다. </p>)
+function ModalList(props)
+{
+    const lis = []
+
+    for(let i = 0; i < props.topics.length; i++)
+    {
+        let t = props.topics[i];
+        lis.push(<p key={t.id}>{t.id + ". " + t.body}</p>)
+    }
+
+    return (
+        <div className="list">
+        <p>어떤걸 컴포넌트로 만들면 좋은가</p>
+        {lis}
+        <br />
+        <p>컴포넌트의 단점</p>
+        <p>state 가져다 쓸 때 문제가 생긴다.</p>
+    </div>
+    )
+}
+
+const Modal2 = (props) => {
+    return (
+        <div>
+            <h4>{props.title}</h4>
+            <p>{props.body}</p>
+            <p>const로 선언하면 나중에 수정할 때 애러를 띄워줘 오류를 줄일 수 있다. </p>
+        </div>
+    )
 }
 
 function Modal()
 {
+    const topics = [
+        {id : 1, body : "반복적인 html 축약할 때"},
+        {id : 2, body : "큰 페이지들"},
+        {id : 3, body : "자주 변경되는 것들"},
+
+    ]
+
     return (
         <div className = "modal">
             <div className="list">
@@ -129,15 +163,9 @@ function Modal()
                 <p>3. {`<함수명><함수명/>`} 쓰기</p>
             </div>
             <div className="list">의미없는 div대신 {`<></>`} 사용</div>
-            <div className="list">
-                <p>어떤걸 컴포넌트로 만들면 좋은가</p>
-                <p>1. 반복적인 html 축약할 때</p>
-                <p>2. 큰 페이지들</p>
-                <p>3. 자주 변경되는 것들</p>
-                <br />
-                <p>컴포넌트의 단점</p>
-                <p>state 가져다 쓸 때 문제가 생긴다.</p>
-            </div>
+            <ModalList topics={topics}/>
+            <Modal2 title="Modal2 Title" body="컴포넌트에 props(매개변수같은 느낌)를 넘겨준다."/>
+            <p>props로 배열이나 오브젝트를 넘겨줄 수 있다.</p>
         </div>
     )
 }
