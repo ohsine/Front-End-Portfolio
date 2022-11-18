@@ -3,7 +3,7 @@ import React from 'react';
 const User = ({userData}) =>
 {
     return (
-        <tr>
+        <tr key={userData.id}>
             <td>{userData.name}</td>
             <td>{userData.email}</td>
         </tr>
@@ -13,10 +13,10 @@ const User = ({userData}) =>
 const UserList = () =>
 {
     const users = [
-        {email: 'ryu@gmail.com,', name: '유재석'},
-        {email: 'kim@gmail.com,', name: '김종국'},
-        {email: 'ha@gmail.com,', name: '하하'},
-        {email: 'song@gmail.com,', name: '송지효'},
+        {id:1, email: 'ryu@gmail.com,', name: '유재석'},
+        {id:2, email: 'kim@gmail.com,', name: '김종국'},
+        {id:3, email: 'ha@gmail.com,', name: '하하'},
+        {id:4, email: 'song@gmail.com,', name: '송지효'},
     ];
 
     return (

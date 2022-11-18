@@ -28,15 +28,15 @@ const Input2 = () =>
     return(
         <div>
             <div>
-                <lavel>이름</lavel>
+                <label>이름</label>
                 <input type="text" id="name" value={name} onChange={onChange}/>
             </div>
             <div>
-                <lavel>이메일</lavel>
+                <label>이메일</label>
                 <input type="email" id="email" value={email} onChange={onChange}/>
             </div>
             <div>
-                <lavel>전화번호</lavel>
+                <label>전화번호</label>
                 <input type="tel" id="tel" value={tel} onChange={onChange}/>
             </div>
             <p>이름: {name}</p>
