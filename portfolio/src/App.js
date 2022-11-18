@@ -9,6 +9,7 @@ import Input2 from "./pages/Input2"
 import List from "./pages/List"
 import Learning from "./pages/Learning"
 import Words from "./pages/Words"
+import Keys from "./pages/Keys"
 import './App.css';
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
           <Link to="/input2">Input2</Link> |{" "}
           <Link to="/list">List</Link> |{" "}
           <Link to="/learning">Learning</Link> |{" "}
-          <Link to="/words">Words</Link>
+          <Link to="/words">Words</Link> |{" "}
+          <Link to="/keys">Keys</Link>
           {/*== <a href="/">Home</a> */}
         </nav>
       </div>
@@ -37,6 +39,7 @@ function App() {
           <Route path="/list" element={<List />}/>
           <Route path="/learning" element={<Learning />}/>
           <Route path="/words" element={<Words />}/>
+          <Route path="/keys" element={<Keys />}/>
         </Routes>
     </div>
   );
