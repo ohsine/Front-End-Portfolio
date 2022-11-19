@@ -38,7 +38,7 @@ function App() {
           <Route path="/Input2" element={<Input2 />}/>
           <Route path="/list" element={<List />}/>
           <Route path="/learning" element={<Learning />}/>
-          <Route path="/words" element={<Words />}/>
+          <Route path="/words/*" element={<Words />}/>
           <Route path="/keys" element={<Keys />}/>
         </Routes>
     </div>

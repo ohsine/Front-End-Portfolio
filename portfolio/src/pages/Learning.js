@@ -24,12 +24,12 @@ const Learning = () =>
         }
     }
 
-    function 글제목함수()
-    {
-        let copy = [...글제목];
-        copy[0] = '여자코트 추천'
-        글제목수정(copy);
-    }
+    // function 글제목함수()
+    // {
+    //     let copy = [...글제목];
+    //     copy[0] = '여자코트 추천'
+    //     글제목수정(copy);
+    // }
 
     function 함수()
     {
