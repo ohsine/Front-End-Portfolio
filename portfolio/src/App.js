@@ -10,6 +10,7 @@ import List from "./pages/List"
 import Learning from "./pages/Learning"
 import Words from "./pages/Words"
 import Keys from "./pages/Keys"
+import PropsToDelete from "./pages/PropsToDelete"
 import './App.css';
 
 function App() {
@@ -40,6 +41,13 @@ function App() {
           <Route path="/learning" element={<Learning />}/>
           <Route path="/words/*" element={<Words />}/>
           <Route path="/keys" element={<Keys />}/>
+        </Routes>
+        <br />
+        <div className="black-nav">
+          <Link to="/PropsToDelete">PropsToDelete</Link>
+        </div>
+        <Routes>
+          <Route path="/PropsToDelete" element={<PropsToDelete />}/>
         </Routes>
     </div>
   );
