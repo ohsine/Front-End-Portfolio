@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import logo from '../images/그림.png'
+import Rerendering1 from '../images/리랜더링1.png'
+import Rerendering2 from '../images/리랜더링2.png'
 
 const Learning = () =>
 {
@@ -109,7 +111,11 @@ const Learning = () =>
                 <hr />
             <Modal />
 
-
+            <p><img src={Rerendering1} width={700} height={400}></img></p>
+            <p><img src={Rerendering2} width={700} height={400}></img></p>
+            <p>새로들어온 데이터가 같은 데이터인지를 확인하고 재랜더링 하는데, state가 객체(배열, 객체)일 때 기존 데이터를 변경만 한다면</p>
+            <p>이 변경된 데이터가 기존 데이터와 같다고 인식해서 재랜더링하지 않는다.</p>
+            <p>반면에 state가 primitive한 데이터일 경우 값을 바꾸면 다른 데이터로 인식하고 재랜더링한다.</p>
         </div>
     )
 }
