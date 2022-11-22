@@ -21,7 +21,7 @@ export default function Day(props)
                             <td>{word.eng}</td>
                             <td>{word.kor}</td>
                         </tr>
-                    ))}
+                    ))} 
                 </tbody>
             </table>
         </div>

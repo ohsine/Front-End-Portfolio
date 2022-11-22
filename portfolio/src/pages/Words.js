@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import DayList from "../components/DayList"
-import Day from "../components/Day"
+import Word from "../components/Word"
 import Header from "../components/Header"
 // import {Route, Routes} from "react-router-dom"
 import dummy from "../db/data.json"
@@ -36,10 +35,7 @@ export default function Words()
                 <table>
                     <tbody>
                         {wordList.map(word => (
-                            <tr key={word.id}>
-                                <td>{word.eng}</td>
-                                <td>{word.kor}</td>
-                            </tr>
+                            <Word word={word} key={word.id}/>
                         ))}
                     </tbody>
                 </table>
@@ -52,3 +48,10 @@ export default function Words()
         </>
     )
 }
+
+// REST API
+
+// Create : POST
+// Read : GET
+// Update : PUT
+// Delete : DELETE
