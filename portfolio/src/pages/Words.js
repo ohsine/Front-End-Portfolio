@@ -1,7 +1,10 @@
+import {Outlet} from "react-router-dom"
 import React, { useState } from "react"
-import Word from "../components/Word"
+import Word from "../components/Word.tsx"
 import Header from "../components/Header"
+
 import useFetch from "../hooks/useFetch";
+
 // import {Route, Routes} from "react-router-dom"
 // import dummy from "../db/data.json"
 
@@ -56,9 +59,16 @@ export default function Words()
 
     const words = useFetch(`http://localhost:3001/words?day=${daySelected}`);
 
+    if(days.length === 0)
+    {
+        return <span>Loading...</span>
+    }
+
     return (
         <>
             <Header />
+
+            <Outlet />
 
             <ul className="list_day">
                 {days.map(day => (
@@ -82,6 +92,8 @@ export default function Words()
                     </tbody>
                 </table>
             </div>
+
+            
 
             {/* <Routes>
                 <Route exact path="/" element={<DayList />} />

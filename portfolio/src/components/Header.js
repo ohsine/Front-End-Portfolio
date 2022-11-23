@@ -8,12 +8,12 @@ export default function Header()
                 <Link to="/words">영어 단어장</Link>
             </h1>
             <div className="menu">
-                <a href="#x" className="link">
-                    단어추가
-                </a>
-                <a href="#x" className="link">
+                <Link to="createword" className="link">
+                    단어 추가
+                </Link>
+                <Link to="createday" className="link">
                     Day 추가
-                </a>
+                </Link>
             </div>
         </div>
     );
