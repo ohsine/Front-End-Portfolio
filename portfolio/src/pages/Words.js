@@ -9,6 +9,10 @@ export default function Words()
 {
     let [daySelected, setSelectedDay] = useState(0);
 
+    const SetDaysF = (e) => {
+        setSelectedDay(e)
+    }
+
     // let [days, setDays] = useState([]);
     // let [count, setCount] = useState(0);
 
@@ -17,10 +21,6 @@ export default function Words()
     // ))
 
     // const [words, setWords] = useState([]);
-
-    const SetDaysF = (e) => {
-        setSelectedDay(e)
-    }
 
     // const onClick2 = () => {
     //     setDays([
@@ -42,10 +42,6 @@ export default function Words()
     //     })
     // }, [])
 
-    const days = useFetch("http://localhost:3001/days");
-
-    const words = useFetch(`http://localhost:3001/words?day=${daySelected}`);
-
     // useEffect(() => {
     //     fetch(`http://localhost:3001/words?day=${daySelected}`)
     //     .then((res) => {
@@ -55,6 +51,10 @@ export default function Words()
     //         setWords(data)
     //     })
     // }, [daySelected])
+
+    const days = useFetch("http://localhost:3001/days");
+
+    const words = useFetch(`http://localhost:3001/words?day=${daySelected}`);
 
     return (
         <>
